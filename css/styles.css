@@ -297,6 +297,8 @@ ul {
 }
 
 .footer-link {
+  display: block;
+
   font-style: normal;
   text-decoration: none;
   color: var(--address-color);
