@@ -1,16 +1,3 @@
-/* Основні кольори
-фон боді #F5F5F5
-фон головної секції #FFFFFF
-фон заголовка h1 та футера #2F303A
-фон команди і колір кнопки #F5F4FA
-колір фокусу і лого #2196F3
-колір лого #000000
-Колір посилання хедер і колір тексту #757575
-колір основного тексту #212121
-колір посилань у футері rgba(255, 255, 255, 0.6)
-колір лінії під хедером #ECECEC
-*/
-
 :root {
   --main-bcg-color: #ffffff;
   --hero-footer-bcg: #2f303a;
@@ -33,8 +20,58 @@ body {
   color: var(--main-color);
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.advantage {
+  padding-bottom: 0;
+}
+
 /* HEADER */
+.page-header .container,
+.page-nav,
+.header-list,
+.page-contacts {
+  display: flex;
+}
+
+.page-header {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-bottom: 1px solid #ECECEC;  
+}
+
 .page-logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.2;
@@ -46,12 +83,25 @@ body {
   color: var(--focus-color);
 }
 
-.page-list {
-  list-style-type: none;
+.header-list {
+  margin-left: 93px;
+}
+
+.nav-item:not(:first-child),
+.contacts:last-child {
+  margin-left: 50px;
+}
+
+.page-contacts {
+  margin-left: auto;
 }
 
 .link,
 .link-contacts {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -76,12 +126,22 @@ body {
 
 /* MAIN */
 /* головна секція hero */
+.hero {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .hero,
 .page-footer {
   background-color: var(--hero-footer-bcg);
 }
 
 .hero-title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -92,8 +152,16 @@ body {
 }
 
 .hero-button {
+  display: block;
+  min-width: 216px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  
+  border: none;
+  border-radius: 4px;
   background-color: var(--focus-color);
-
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
   font-family: inherit;
@@ -103,15 +171,40 @@ body {
   letter-spacing: 0.06em;
   color: var(--white-color);
 }
+
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
 }
 
 /* секція наші переваги */
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .advantage-title {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
+}
+
+.advantage-list {
+  display: flex;
+}
+
+.advantage-item {
+  width: 270px;
 }
 
 .advantage-text {
@@ -120,13 +213,32 @@ body {
 
 /* секція чим ми займаємось */
 .section-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 
+.job-list {
+  display: flex;
+}
+
+.job-item:not(:first-child),
+.team-item:not(:first-child),
+.advantage-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.image {
+  display: block;
+}
+
 /* секція наша команда */
 .team {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--team-bcg-color);
 
   font-size: 16px;
@@ -134,19 +246,54 @@ body {
   text-align: center;
 }
 
+.team-list {
+  display: flex;
+}
+
+.team-item {
+  width: 270px;
+  background-color: var(--main-bcg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .team-title {
+  margin-bottom: 10px;
+  padding-top: 30px;
   font-weight: 500;
   font-size: 16px;
 }
 
 .team-text {
+  padding-bottom: 30px;
   color: var(--secondary-color);
 }
 
 /* FOOTER */
+.page-footer {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-logo.footer-logo {
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .logo-footer,
 .footer-link.address-link {
   color: var(--white-color);
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-link {
