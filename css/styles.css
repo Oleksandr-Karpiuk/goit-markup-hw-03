@@ -153,7 +153,6 @@ ul {
 
 .hero-button {
   display: block;
-  min-width: 216px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
@@ -204,7 +203,7 @@ ul {
 }
 
 .advantage-item {
-  width: 270px;
+  flex-basis: calc(100% / 4);
 }
 
 .advantage-text {
@@ -224,6 +223,10 @@ ul {
   display: flex;
 }
 
+.job-item {
+  flex-basis: calc(100% / 3);
+}
+
 .job-item:not(:first-child),
 .team-item:not(:first-child),
 .advantage-item:not(:first-child) {
@@ -232,6 +235,7 @@ ul {
 
 .image {
   display: block;
+  max-width: 100%;
 }
 
 /* секція наша команда */
@@ -251,21 +255,23 @@ ul {
 }
 
 .team-item {
-  width: 270px;
+  flex-basis: calc(100% / 4);
   background-color: var(--main-bcg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-member {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-title {
   margin-bottom: 10px;
-  padding-top: 30px;
   font-weight: 500;
   font-size: 16px;
 }
 
 .team-text {
-  padding-bottom: 30px;
   color: var(--secondary-color);
 }
 
@@ -310,7 +316,23 @@ ul {
 }
 
 /* PORTFOLIO.HTML MAIN */
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-list:not(:last-child) {
+  margin-bottom: 50px;
+}
+
 .portfolio-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 22px;
+  
+  border: none;
+  border-radius: 4px;
   background-color: var(--team-bcg-color);
 
   cursor: pointer;
@@ -324,6 +346,14 @@ ul {
   color: var(--main-color);
 }
 
+.portfolio-button.first-button {
+  padding: 6px 25px;
+}
+
+.item-button:not(:first-child) {
+  margin-left: 8px;
+}
+
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--focus-color);
@@ -331,7 +361,27 @@ ul {
   color: var(--white-color);
 }
 
+.portfolio-list.card-list {
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.portfolio-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.card-description {
+  padding: 20px 24px;
+  border: 1px solid #EEEEEE;
+  border-top: none;
+}
+
 .portfolio-title {
+  margin-bottom: 4px;
+  
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
