@@ -190,19 +190,19 @@ ul {
   overflow: hidden;
 }
 
-.advantage-title {
-  margin-bottom: 10px;
-
-  font-size: 14px;
-  line-height: 1.14;
-}
-
 .advantage-list {
   display: flex;
 }
 
 .advantage-item {
-  flex-basis: calc(100% / 4);
+  flex-basis: calc((100% - 30px * 3) / 4);
+}
+
+.advantage-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
 }
 
 .advantage-text {
@@ -223,7 +223,7 @@ ul {
 }
 
 .job-item {
-  flex-basis: calc(100% / 3);
+  flex-basis: calc((100% - 30px * 2) / 3);
 }
 
 .job-item:not(:first-child),
@@ -251,7 +251,7 @@ ul {
 }
 
 .team-item {
-  flex-basis: calc(100% / 4);
+  flex-basis: calc((100% - 30px * 3) / 4);
   background-color: var(--main-bcg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
